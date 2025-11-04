@@ -60,7 +60,8 @@ class HJ_Zoho_Ads_Integration {
 
             // Consent
             'require_consent'     => 0,
-            'consent_field_names' => 'consent,gdpr_consent',
+            // Include Fluent Forms common consent names and the provided terms field
+            'consent_field_names' => 'consent,gdpr_consent,terms-n-condition',
         ];
     }
 
@@ -159,6 +160,21 @@ class HJ_Zoho_Ads_Integration {
 
         if (empty($o['form_ids_csv'])) {
             $o['form_ids_csv'] = '3';
+            $updated = true;
+        }
+
+        // Seed default mapping for form ID 3 if none exists yet
+        $default_form_id = 3;
+        if (!isset($o['form_mappings'][$default_form_id]) || empty($o['form_mappings'][$default_form_id])) {
+            $o['form_mappings'][$default_form_id] = [
+                'First_Name'            => 'first_name',
+                'Email'                 => 'emailaddress',
+                // Prefer Mobile for mobile_phone; Zoho also supports Phone
+                'Mobile'                => 'mobile_phone',
+                'Description'           => 'message',
+                // Custom field for preferred contact method if present in Zoho
+                'Contact_Through__c'    => 'preferred_contact_method',
+            ];
             $updated = true;
         }
 

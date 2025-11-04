@@ -50,9 +50,9 @@ class HJ_Zoho_CRM {
             }
         }
         
-        // Ensure required fields have default values
-        if (empty($lead['Lead_Source'])) $lead['Lead_Source'] = 'Website';
-        if (empty($lead['Lead_Status'])) $lead['Lead_Status'] = 'New';
+    // Ensure required fields have default values
+    if (empty($lead['Lead_Source'])) $lead['Lead_Source'] = 'Kneesurgery Website';
+    if (empty($lead['Lead_Status'])) $lead['Lead_Status'] = 'New';
         if (empty($lead['Company'])) $lead['Company'] = '-';
         
         // Handle Lead_Source_URL
