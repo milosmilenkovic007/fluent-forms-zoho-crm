@@ -1,0 +1,148 @@
+/* HJ Zoho Admin Styles */
+
+.hj-field-mapping .form-table th {
+    width: 250px;
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+.hj-field-mapping .form-table select {
+    min-width: 300px;
+}
+
+.hj-field-mapping .section-title {
+    background: #f1f1f1;
+    padding: 12px 15px;
+    margin: 25px 0 15px 0;
+    border-left: 4px solid #0073aa;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.hj-field-mapping .description {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.hj-mapping-status {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.hj-mapping-status.active {
+    color: #46b450;
+}
+
+.hj-mapping-status.inactive {
+    color: #dc3232;
+}
+
+.hj-mapping-status.warning {
+    color: #ffb900;
+}
+
+.form-selection-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.form-selection-section h2 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+.mapping-form {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* Status indicators in logs */
+.status-success {
+    color: #46b450;
+    font-weight: bold;
+}
+
+.status-error {
+    color: #dc3232;
+    font-weight: bold;
+}
+
+.status-skipped {
+    color: #ffb900;
+    font-weight: bold;
+}
+
+.status-ignored {
+    color: #666;
+    font-weight: bold;
+}
+
+/* Improve table styling */
+.widefat th,
+.widefat td {
+    padding: 12px 10px;
+}
+
+.widefat details summary {
+    cursor: pointer;
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+.widefat details summary:hover {
+    color: #005a87;
+}
+
+/* Better button spacing */
+.button + .button {
+    margin-left: 10px;
+}
+
+/* Form field descriptions */
+.form-table .description {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.form-table code {
+    background: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Notice improvements */
+.notice ul {
+    margin: 0.5em 0;
+    padding-left: 20px;
+}
+
+.notice ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 782px) {
+    .hj-field-mapping .form-table select {
+        min-width: 100%;
+    }
+    
+    .hj-field-mapping .form-table th {
+        width: auto;
+    }
+    
+    .form-selection-section {
+        padding: 15px;
+    }
+    
+    .mapping-form {
+        padding: 15px;
+    }
+}
